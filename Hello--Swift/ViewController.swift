@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import Foundation
 import AVFoundation
+
+let iiFaderForAvAudioPlayer_defaultFadeDurationSeconds = 3.0
+let iiFaderForAvAudioPlayer_defaultVelocity = 2.0
 
 class ViewController: UIViewController {
     
@@ -17,8 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var Sound01 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("gvsb03", ofType: "mp3")!)
-        var Sound02 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("gvsb04", ofType: "mp3")!)
+        var Sound01 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("country", ofType: "mp3")!)
+        var Sound02 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("metal", ofType: "mp3")!)
         println(Sound01)
         println(Sound02)
 
@@ -38,36 +42,82 @@ class ViewController: UIViewController {
         audioPlayer02.play()
         audioPlayer02.volume = 0;
         audioPlayer02.numberOfLoops = -1
-
-        if audioPlayer01.volume < 0.1 {
-            audioPlayer01.volume = audioPlayer01.volume + 0.1
-            var dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
-
-        } else {
-            audioPlayer01.volume = 1.0
-        }
     }
 
+    func fadePlayer01(player: AVAudioPlayer,
+        fromVolume startVolume : Float,
+        toVolume endVolume : Float,
+        overTime time : Float) {
+            
+            // Update the volume every 1/100 of a second
+            var fadeSteps : Int = Int(time) * 10
+            // Work out how much time each step will take
+            var timePerStep : Float = 1 / 100.0
+            
+            self.audioPlayer01.volume = startVolume;
+            
+            // Schedule a number of volume changes
+            for step in 0...fadeSteps {
+                
+                let delayInSeconds : Float = Float(step) * timePerStep
+                
+                let popTime = dispatch_time(DISPATCH_TIME_NOW,
+                    Int64(delayInSeconds * Float(NSEC_PER_SEC)));
+                dispatch_after(popTime, dispatch_get_main_queue()) {
+                    
+                    let fraction = (Float(step) / Float(fadeSteps))
+                    
+                    self.audioPlayer01.volume = startVolume +
+                        (endVolume - startVolume) * fraction
+                }
+            }
+    }
 
+    func fadePlayer02(player: AVAudioPlayer,
+        fromVolume startVolume : Float,
+        toVolume endVolume : Float,
+        overTime time : Float) {
+            
+            // Update the volume every 1/100 of a second
+            var fadeSteps : Int = Int(time) * 10
+            // Work out how much time each step will take
+            var timePerStep : Float = 1 / 100.0
+            
+            self.audioPlayer02.volume = startVolume;
+            
+            // Schedule a number of volume changes
+            for step in 0...fadeSteps {
+                
+                let delayInSeconds : Float = Float(step) * timePerStep
+                
+                let popTime = dispatch_time(DISPATCH_TIME_NOW,
+                    Int64(delayInSeconds * Float(NSEC_PER_SEC)));
+                dispatch_after(popTime, dispatch_get_main_queue()) {
+                    
+                    let fraction = (Float(step) / Float(fadeSteps))
+                    
+                    self.audioPlayer02.volume = startVolume +
+                        (endVolume - startVolume) * fraction
+                }
+            }
+    }
+
+    
 
     override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
 
         if UIDevice.currentDevice().orientation == .LandscapeLeft {
             println("Landscape Left")
-            audioPlayer01.volume = 0;
-            audioPlayer02.volume = 1.0;
-
-            audioPlayer02.volume = audioPlayer02.volume - 0.1;
-            [self performSelector:@selector(doVolumeFade) withObject:nil afterDelay:0.1];
-
+            fadePlayer01(audioPlayer01, fromVolume: 1.0, toVolume: 0.0, overTime: 50.0)
+            fadePlayer02(audioPlayer02, fromVolume: 0.0, toVolume: 1.0, overTime: 50.0)
         } else if UIDevice.currentDevice().orientation == .LandscapeRight {
             println("Landscape Right")
-            audioPlayer01.volume = 0;
-            audioPlayer02.volume = 1.0;
+            fadePlayer01(audioPlayer01, fromVolume: 1.0, toVolume: 0.0, overTime: 50.0)
+            fadePlayer02(audioPlayer02, fromVolume: 0.0, toVolume: 1.0, overTime: 50.0)
         } else {
             println("Portrait")
-            audioPlayer01.volume = 1.0;
-            audioPlayer02.volume = 0;
+            fadePlayer01(audioPlayer01, fromVolume: 0.0, toVolume: 1.0, overTime: 50.0)
+            fadePlayer02(audioPlayer02, fromVolume: 1.0, toVolume: 0.0, overTime: 50.0)
         }
     }
 }

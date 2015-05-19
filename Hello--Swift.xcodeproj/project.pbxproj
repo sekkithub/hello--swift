@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C65932591B04C3E800019EDA /* gvsb03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C65932571B04C3E800019EDA /* gvsb03.mp3 */; };
-		C659325A1B04C3E800019EDA /* gvsb04.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C65932581B04C3E800019EDA /* gvsb04.mp3 */; };
+		C62C58681B0B576E0088C69A /* country.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C62C58661B0B576E0088C69A /* country.mp3 */; };
+		C62C58691B0B576E0088C69A /* metal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C62C58671B0B576E0088C69A /* metal.mp3 */; };
+		C64420151B0654BC00C1EFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64420141B0654BC00C1EFA7 /* Foundation.framework */; };
 		C659325D1B04F08000019EDA /* hello.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C659325B1B04F08000019EDA /* hello.mp3 */; };
 		C659325E1B04F08000019EDA /* mayonnaise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C659325C1B04F08000019EDA /* mayonnaise.mp3 */; };
 		C66508F91B035DE4009206D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66508F81B035DE4009206D7 /* AppDelegate.swift */; };
@@ -18,6 +19,8 @@
 		C66509031B035DE4009206D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66509011B035DE4009206D7 /* LaunchScreen.xib */; };
 		C665090F1B035DE4009206D7 /* Hello__SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665090E1B035DE4009206D7 /* Hello__SwiftTests.swift */; };
 		C66509191B0369E3009206D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66509181B0369E3009206D7 /* AVFoundation.framework */; };
+		C6E9AAC61B0B5147002C6F57 /* cake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6E9AAC51B0B5147002C6F57 /* cake.mp3 */; };
+		C6FF89051B0B4DCF00847AD5 /* gvsb01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6FF89031B0B4DCF00847AD5 /* gvsb01.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C65932571B04C3E800019EDA /* gvsb03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gvsb03.mp3; path = ../../../../../.Trash/gvsb03.mp3; sourceTree = "<group>"; };
-		C65932581B04C3E800019EDA /* gvsb04.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gvsb04.mp3; path = ../../../../../.Trash/gvsb04.mp3; sourceTree = "<group>"; };
+		C62C58661B0B576E0088C69A /* country.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = country.mp3; path = "../../../../../Dropbox/the-neighbourhood/projects/fatduck/sounds/country.mp3"; sourceTree = "<group>"; };
+		C62C58671B0B576E0088C69A /* metal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = metal.mp3; path = "../../../../../Dropbox/the-neighbourhood/projects/fatduck/sounds/metal.mp3"; sourceTree = "<group>"; };
+		C64420141B0654BC00C1EFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C659325B1B04F08000019EDA /* hello.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hello.mp3; path = ../../../../../Downloads/hello.mp3; sourceTree = "<group>"; };
 		C659325C1B04F08000019EDA /* mayonnaise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mayonnaise.mp3; path = ../../../../../Downloads/mayonnaise.mp3; sourceTree = "<group>"; };
 		C66508F31B035DE4009206D7 /* Hello--Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello--Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +50,8 @@
 		C665090D1B035DE4009206D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C665090E1B035DE4009206D7 /* Hello__SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello__SwiftTests.swift; sourceTree = "<group>"; };
 		C66509181B0369E3009206D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C6E9AAC51B0B5147002C6F57 /* cake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cake.mp3; path = "../../../../../Dropbox/the-neighbourhood/projects/fatduck/sounds/cake.mp3"; sourceTree = "<group>"; };
+		C6FF89031B0B4DCF00847AD5 /* gvsb01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gvsb01.mp3; path = "../../../../../Dropbox/the-neighbourhood/projects/fatduck/sounds/gvsb01.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64420151B0654BC00C1EFA7 /* Foundation.framework in Frameworks */,
 				C66509191B0369E3009206D7 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +77,7 @@
 		C66508EA1B035DE4009206D7 = {
 			isa = PBXGroup;
 			children = (
+				C64420141B0654BC00C1EFA7 /* Foundation.framework */,
 				C66509181B0369E3009206D7 /* AVFoundation.framework */,
 				C66508F51B035DE4009206D7 /* Hello--Swift */,
 				C665090B1B035DE4009206D7 /* Hello--SwiftTests */,
@@ -89,10 +97,12 @@
 		C66508F51B035DE4009206D7 /* Hello--Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C62C58661B0B576E0088C69A /* country.mp3 */,
+				C62C58671B0B576E0088C69A /* metal.mp3 */,
+				C6E9AAC51B0B5147002C6F57 /* cake.mp3 */,
+				C6FF89031B0B4DCF00847AD5 /* gvsb01.mp3 */,
 				C659325B1B04F08000019EDA /* hello.mp3 */,
 				C659325C1B04F08000019EDA /* mayonnaise.mp3 */,
-				C65932571B04C3E800019EDA /* gvsb03.mp3 */,
-				C65932581B04C3E800019EDA /* gvsb04.mp3 */,
 				C66508F81B035DE4009206D7 /* AppDelegate.swift */,
 				C66508FA1B035DE4009206D7 /* ViewController.swift */,
 				C66508FC1B035DE4009206D7 /* Main.storyboard */,
@@ -210,13 +220,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62C58691B0B576E0088C69A /* metal.mp3 in Resources */,
 				C66508FE1B035DE4009206D7 /* Main.storyboard in Resources */,
+				C6FF89051B0B4DCF00847AD5 /* gvsb01.mp3 in Resources */,
+				C6E9AAC61B0B5147002C6F57 /* cake.mp3 in Resources */,
 				C659325D1B04F08000019EDA /* hello.mp3 in Resources */,
-				C659325A1B04C3E800019EDA /* gvsb04.mp3 in Resources */,
 				C659325E1B04F08000019EDA /* mayonnaise.mp3 in Resources */,
+				C62C58681B0B576E0088C69A /* country.mp3 in Resources */,
 				C66509031B035DE4009206D7 /* LaunchScreen.xib in Resources */,
 				C66509001B035DE4009206D7 /* Images.xcassets in Resources */,
-				C65932591B04C3E800019EDA /* gvsb03.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
